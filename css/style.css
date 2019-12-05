@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+}
+
+html{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+}
+
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  margin:0;
+}
+
+/* company logo */
+.logo{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  width: 9rem;
+  margin: 0 0 0 3rem;
+}
+
+.logo:hover{
+  width: 9.4rem;
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  opacity:.7;
+}
+
+/* header links */
+.header{
+  margin-top: 0;
+  background-color: white;
+  position:fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.menuButton{
+  max-width: 100%;
+  list-style-type: none;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 3rem 0 auto;
+}
+
+.icon{
+  display:none;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: red;
+}
+
+li{
+  list-style-type: none;
+  font-size: 1.1rem;
+  padding-left: 1.5rem;
+}
+
+.background{
+  background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../images/toronto.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+}
+
+h1{
+  text-align: center;
+  padding-top: 20rem;
+  font-size: 3rem;
+  color: white;
+}
+
+main{
+  padding-top: 5rem;
+}
+
+h2{
+  font-size:3.5rem;
+  font-family: Gothic A1;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-family: Gothic A1;
+  text-align: center;
+}
+
+.image1{
+  width: 75%;
+}
+
+.image2{
+  width: 50%;
+}
+
+.image3{
+  width: 40%;
+}
+
+.image4{
+  width: 50%;
+}
+
+#image{
+opacity: 1;
+}
+#image:hover{
+  opacity:.5;
+}
+
+/* title of the grid pics */
+.list{
+  font-size: 1.2rem;
+  padding-bottom: .5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  align-items: center;
+  text-decoration:underline red;
+}
+
+article{
+  padding-top: 1rem;
+  color: rgba(0, 0, 0, .5);
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.images{
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 2rem;
+  margin: 0 auto;
+  padding-top: 4rem;
+  padding-right: 2.5rem;
+}
+
+.section{
+  text-align: center;
+  align-items: center;
+}
+
+.space{
+  height: 10rem;
+  background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),url(../images/toronto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  margin: 0;
+}
+
+section{
+  margin-top: 10rem;
+}
+
+.ul{
+  list-style-type: none;
+  padding-top: 1rem;
+  max-width: 30rem;
+  margin:0 auto;
+}
+
+.contact{
+  margin-top: 2rem;
+  opacity: 1;
+  text-align: center;
+}
+
+.button{
+  margin-top: 6rem;
+  margin-left: 1rem;
+  background-color: red;
+  border-radius: .5rem;
+  width: 6rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: .9rem;
+  color: white;
+}
+
+.button:hover{
+  background-color: red;
+  color: black;
+}
+
+
+.spaces{
+  height: 10rem;
+  background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),url(../images/toronto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+
+footer{
+  background-image: linear-gradient(to right, #666666, #999999);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-top: 0;
+}
+
+@media screen and (max-width:55rem){
+
+  .logo{
+    width: 5rem;
+  }
+
+.logo:hover{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  width: 5rem;
+  opacity: .7;
+}
+
+  .images{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  section{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .ul{
+    width:30rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 37.25rem){
+
+  .header{
+    display:block;
+  }
+
+  .menuButton{
+    position: absolute;
+    width: 8rem;
+    height: 12rem;
+    display: list-item;
+    background-color: white;
+    right: -3rem;
+    text-align: center;
+    padding-left: 0;
+    top:-8.7rem;
+    transition: top .5s ease;
+  }
+
+  .menuButton-expanded{
+    top:2rem;
+    transition: .5s ease-in-out;
+    border-bottom: .1rem solid rgba(0, 0, 0, .3);
+    border-left: .1rem solid rgba(0, 0, 0, .3);
+    border-right: .1rem solid rgba(0, 0, 0, .3);
+  }
+
+  .icon{
+    display:inline-block;
+    width: 2.5rem;
+    transition: .4s ease-out;
+  }
+
+  .icon:hover{
+ cursor: pointer;
+  }
+
+  .icon-expanded{
+  transform: rotate(180deg);
+  transition: .4s ease-in;
+  }
+
+  .listm{
+    padding-left: 0;
+    padding-bottom: 1rem;
+  }
+
+  main{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  section{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .ul{
+    margin-left: 3rem;
+  }
+
+  .li{
+    padding-left: 0;
+  }
+
+  .button{
+    margin-top: 2rem;
+  }
+
+  .images{
+    display:grid;
+    grid-template-columns: 1fr;
+  }
+}
